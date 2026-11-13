@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="Build a thoughtful, relaxed travel itinerary around the way you like to explore.">
+  <title>Roava — thoughtful trips, made for you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Roava home"><span class="brand-mark">R</span><span>roava<span class="brand-period">.</span></span></a>
+    <div class="topbar-right"><span class="local-pill"><span class="status-dot"></span> A thoughtful travel planner</span><a class="top-link" href="#how-it-works">How it works <span>↗</span></a></div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MADE FOR YOUR KIND OF GETAWAY</p>
+        <h1 id="hero-title">A little less planning.<br><em>A lot more wandering.</em></h1>
+        <p class="hero-subtitle">Tell us what makes a trip feel like yours. Get a thoughtful itinerary with room to explore.</p>
+        <div class="hero-meta"><span><b>✳</b> Built around your interests</span><span><b>⌁</b> A pace that feels right</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a Paris street and café">
+        <div class="sun"></div><div class="art-label"><span>THE ART OF GETTING AWAY</span><span>48°51' N · 2°21' E</span></div>
+        <div class="art-arch arch-one"></div><div class="art-arch arch-two"></div><div class="art-balcony"></div>
+        <div class="art-window window-one"></div><div class="art-window window-two"></div>
+        <div class="art-cafe"><span>CAFÉ</span><i></i><i></i><i></i></div>
+        <div class="art-plant plant-one">✦</div><div class="art-plant plant-two">✦</div>
+        <div class="art-footnote">A day well spent<br>starts with a good plan.</div>
+      </div>
+    </section>
+
+    <section class="planner-layout" aria-label="Trip planner">
+      <form id="plan-form" class="planner-card">
+        <div class="card-heading"><div><p class="eyebrow">YOUR NEXT CHAPTER</p><h2>Plan your getaway</h2></div><span class="step-badge">01 <span>/</span> 01</span></div>
+        <div class="field-group"><label for="destination">Where to?</label><div class="input-with-icon"><span>⌖</span><input id="destination" name="destination" type="text" placeholder="A city, region, or country" value="Paris" maxlength="80" required></div></div>
+        <div class="field-row">
+          <div class="field-group"><label for="duration">How long?</label><div class="select-wrap"><select id="duration" name="duration"><option value="1">1 day</option><option value="2" selected>2 days</option><option value="3">3 days</option><option value="4">4 days</option><option value="5">5 days</option><option value="7">1 week</option><option value="10">10 days</option></select><span>⌄</span></div></div>
+          <div class="field-group"><label for="budget">Your budget</label><div class="select-wrap"><select id="budget" name="budget"><option value="budget">Easy on the wallet</option><option value="moderate" selected>Comfortable</option><option value="luxury">A little luxe</option></select><span>⌄</span></div></div>
+        </div>
+        <fieldset class="field-group pace-field"><legend>What pace feels right?</legend><div class="choice-row"><label class="choice"><input type="radio" name="pace" value="relaxed" checked><span>Slow & easy</span></label><label class="choice"><input type="radio" name="pace" value="balanced"><span>A bit of both</span></label><label class="choice"><input type="radio" name="pace" value="packed"><span>See it all</span></label></div></fieldset>
+        <fieldset class="field-group interests-field"><legend>What are you into? <span class="optional">Pick a few</span></legend><div class="interest-list">
+          <label class="interest-chip"><input type="checkbox" name="interest" value="art and museums" checked><span class="chip-icon">▧</span> Art & museums</label>
+          <label class="interest-chip"><input type="checkbox" name="interest" value="historic architecture" checked><span class="chip-icon">⌂</span> Architecture</label>
+          <label class="interest-chip"><input type="checkbox" name="interest" value="bakery cafes and local food" checked><span class="chip-icon">☕</span> Cafés & food</label>
+          <label class="interest-chip"><input type="checkbox" name="interest" value="local culture"><span class="chip-icon">✳</span> Local culture</label>
+          <label class="interest-chip"><input type="checkbox" name="interest" value="parks and nature"><span class="chip-icon">♧</span> Nature</label>
+          <label class="interest-chip"><input type="checkbox" name="interest" value="shopping and markets"><span class="chip-icon">⌑</span> Markets</label>
+        </div></fieldset>
+        <div class="field-group notes-field"><label for="notes">Anything else we should know? <span class="optional">Optional</span></label><textarea id="notes" name="notes" rows="2" maxlength="600" placeholder="Dietary needs, must-sees, or places you have already visited..."></textarea></div>
+        <button id="submit" class="submit-button" type="submit"><span class="button-label">Build my itinerary</span><span class="button-arrow">↗</span></button>
+        <p class="privacy-note"><span>◈</span> Your itinerary is generated by the local Llama model on your computer.</p>
+      </form>
+
+      <aside class="side-column">
+        <div class="aside-card aside-note"><span class="note-mark">“</span><p class="note-quote">The best trips leave a little space for the unexpected.</p><p class="note-caption">YOUR PERSONAL TRAVEL PHILOSOPHY</p><div class="note-stamp">RW<br>✳</div></div>
+        <div class="aside-card how-card" id="how-it-works"><p class="eyebrow">THOUGHTFUL BY DESIGN</p><h3>Good plans, with breathing room.</h3>
+          <div class="how-step"><span>1</span><p><b>You set the mood.</b><br>Choose your interests, pace, and budget.</p></div>
+          <div class="how-step"><span>2</span><p><b>Your planner gets to work.</b><br>It finds places and shapes a route around you.</p></div>
+          <div class="how-step"><span>3</span><p><b>You get out there.</b><br>Take your plan along, and make it your own.</p></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="output-section" class="output-section hidden" aria-live="polite">
+      <div class="output-header"><div><p class="eyebrow">YOUR TRIP, TAKING SHAPE</p><h2>Your itinerary</h2></div><div class="output-actions"><button id="copy-button" class="quiet-button" type="button">Copy plan</button><button id="download-button" class="quiet-button" type="button">Download .md</button></div></div>
+      <p id="plan-summary" class="plan-summary"></p><div id="plan-content" class="plan-content"></div>
+      <div class="review-panel">
+        <div class="review-heading"><div><p class="eyebrow">MAKE IT YOURS</p><h3>Review & refine</h3></div><span class="review-symbol" aria-hidden="true">✎</span></div>
+        <p class="review-intro">Edit the itinerary below if you like. When it feels right, confirm your review and Roava will check the structure, trip length, and consistency.</p>
+        <label class="review-label" for="review-editor">Your editable itinerary</label>
+        <textarea id="review-editor" class="review-editor" rows="15" spellcheck="true" aria-describedby="review-help"></textarea>
+        <p id="review-help" class="review-help">Markdown is supported, including tables. Your edits appear in the preview above.</p>
+        <div class="review-actions">
+          <label class="review-confirm"><input id="review-confirm" type="checkbox"><span>I’ve reviewed this itinerary and am ready for the final check.</span></label>
+          <button id="final-check" class="submit-button final-check-button" type="button" disabled><span class="button-label">Check & finalize</span><span class="button-arrow">✓</span></button>
+        </div>
+        <p id="review-status" class="review-status" role="status" aria-live="polite"></p>
+      </div>
+      <p class="verify-note"><span>✳</span> Opening hours, prices, and availability can change. Check details before you go.</p>
+    </section>
+    <div id="status" class="status-message" role="status" aria-live="polite"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </main>
+  <footer class="footer"><span class="brand small-brand"><span class="brand-mark">R</span> roava<span class="brand-period">.</span></span><span>Made for curious people and unhurried days.</span></footer>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

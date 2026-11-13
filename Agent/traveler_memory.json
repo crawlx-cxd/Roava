@@ -1,0 +1,13 @@
+{
+  "traveler_profile": {
+    "name": "Traveler",
+    "default_pace": "relaxed",
+    "dietary_preferences": "vegetarian",
+    "budget_level": "moderate",
+    "mobility_needs": "none"
+  },
+  "visited_places": [
+    "Jantar Mantar"
+  ],
+  "past_trips": []
+}
