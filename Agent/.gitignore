@@ -1,0 +1,5 @@
+.env
+__pycache__/
+*.py[cod]
+agent_audit.jsonl
+traveler_memory.json
