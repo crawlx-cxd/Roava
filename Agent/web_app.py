@@ -188,7 +188,7 @@ Return the checked itinerary as Markdown, with a brief "Final check" summary, a 
                 tool_registry=ToolRegistry(),
                 memory_store=_new_web_memory_store(),
                 task_planner=TaskPlanner(),
-                audit_logger=AuditLogger("agent_audit.jsonl"),
+                audit_logger=AuditLogger(os.devnull),
                 step_limiter=StepLimiter(max_steps=8),
                 hitl_manager=HITLManager(auto_reject=True),
                 llm_client=llm,

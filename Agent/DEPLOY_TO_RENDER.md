@@ -6,7 +6,7 @@ This project serves its HTML, CSS, JavaScript, and API from one Python web servi
 
 1. Keep .env, traveler_memory.json, and agent_audit.jsonl out of Git. The repository .gitignore already lists these paths; confirm they are not staged or committed.
 2. Push the project contents (including data/, static/, all imported Python modules, requirements.txt, and render.yaml) to a GitHub repository.
-3. In Render, choose New > Blueprint, connect that repository, and select the branch to deploy.
+3. In Render, choose New > Blueprint, connect that repository, select the branch, and set Blueprint Path to Agent/render.yaml.
 4. During setup, provide GEMINI_API_KEY as a secret environment value. Never add the real key to this repository.
 5. Deploy and open the onrender.com URL. The first request after the free service sleeps may take about a minute.
 

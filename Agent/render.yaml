@@ -2,6 +2,7 @@ services:
   - type: web
     name: roava-travel-planner
     runtime: python
+    rootDir: Agent
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python web_app.py
